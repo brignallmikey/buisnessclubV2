@@ -1,0 +1,52 @@
+:root {
+  --color-1: black;  
+  --color-2: grey;  
+  --color-3: white;  
+}
+
+
+.header-toolbar {
+  height: 6.25vw;
+  width: 100vw;
+  background-color: var(--color-1);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  font-size: 6.25vw;
+  font-weight: bold;
+  color: var(--color-3);
+  padding-left: 1vw;
+  float: left;
+  overflow: hidden;
+  }
+
+.search-bar {
+  float: right;
+  height: 3.125vw;
+  width: 14vw;
+  margin: 3.125vw 2.25vw 0vw 0vw;
+  background-color: var(--color-3);
+  border: none;
+  color: var(--color-1);
+  font-size: 1vw;
+  }
+
+  input.search-bar {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+
+  .header-link {
+    width: 3.125vw;
+    height: auto;
+    color: var(--color-3);
+    margin: 3.125vw 3.125vw 0vw 0vw;
+    float: right;
+    font-size: 3.125vw;
+    font-weight: bold;
+  }
+
