@@ -19,7 +19,6 @@ function Header() {
             <div className='control-icon more has-items'>
               <IoMdHappy />
             </div>
-            <div className='label-avatar bg-blue'>6</div>
 
             <div className='more-dropdown more-with-triangle triangle-top-center'>
               <div className='ui-block-title ui-block-title-small'>
@@ -532,7 +531,6 @@ function Header() {
               <a className='nav-link' data-toggle='tab' href='#request' role='tab'>
                 <div className='control-icon has-items'>
                   <IoMdHappy />
-                  <div className='label-avatar bg-blue'>6</div>
                 </div>
               </a>
             </li>
