@@ -485,51 +485,7 @@ function Header() {
                   </ul>
 
                   <div className='ui-block-title ui-block-title-small'>
-                    <h6 className='title'>Chat Settings</h6>
-                  </div>
-
-                  <ul className='chat-settings'>
-                    <li>
-                      <a href='#'>
-                        <span className='icon-status online'></span>
-                        <span>Online</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href='#'>
-                        <span className='icon-status away'></span>
-                        <span>Away</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href='#'>
-                        <span className='icon-status disconected'></span>
-                        <span>Disconnected</span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href='#'>
-                        <span className='icon-status status-invisible'></span>
-                        <span>Invisible</span>
-                      </a>
-                    </li>
-                  </ul>
-
-                  <div className='ui-block-title ui-block-title-small'>
-                    <h6 className='title'>Custom Status</h6>
-                  </div>
-
-                  <form className='form-group with-button custom-status'>
-                    <input className='form-control' placeholder='' type='text' value='Space Cowboy' />
-
-                    <button className='bg-purple'>
-                      <FaCheck />
-                    </button>
-                  </form>
-
-                  <div className='ui-block-title ui-block-title-small'>
-                    <h6 className='title'>About Olympus</h6>
+                    <h6 className='title'>About Club</h6>
                   </div>
 
                   <ul>
@@ -545,7 +501,7 @@ function Header() {
                     </li>
                     <li>
                       <a href='#'>
-                        <span>Careers</span>
+                        <span>Jobs</span>
                       </a>
                     </li>
                     <li>
@@ -775,55 +731,6 @@ function Header() {
                     <FaRegCommentDots />
                   </span>
 
-                  <div className='more'>
-                    <FaEllipsisH />
-                  </div>
-                </li>
-                <li>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
-                  </div>
-                  <div className='notification-event'>
-                    <a href='#' className='h6 notification-friend'>
-                      Elaine Dreyfuss
-                    </a>
-                    <span className='chat-message-item'>We’ll have to check that at the office and see if the client is on board with...</span>
-                    <span className='notification-date'>
-                      <time className='entry-date updated' datetime='2004-07-24T18:18'>
-                        Yesterday at 9:56pm
-                      </time>
-                    </span>
-                  </div>
-                  <span className='notification-icon'>
-                    <FaRegCommentDots />
-                  </span>
-                  <div className='more'>
-                    <FaEllipsisH />
-                  </div>
-                </li>
-
-                <li className='chat-group'>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
-                    <img src={profilePic} alt='author' />
-                    <img src={profilePic} alt='author' />
-                    <img src={profilePic} alt='author' />
-                  </div>
-                  <div className='notification-event'>
-                    <a href='#' className='h6 notification-friend'>
-                      You, Faye, Ed &amp; Jet +3
-                    </a>
-                    <span className='last-message-author'>Ed:</span>
-                    <span className='chat-message-item'>Yeah! Seems fine by me!</span>
-                    <span className='notification-date'>
-                      <time className='entry-date updated' datetime='2004-07-24T18:18'>
-                        March 16th at 10:23am
-                      </time>
-                    </span>
-                  </div>
-                  <span className='notification-icon'>
-                    <FaRegCommentDots />
-                  </span>
                   <div className='more'>
                     <FaEllipsisH />
                   </div>
