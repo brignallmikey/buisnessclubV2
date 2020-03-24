@@ -1,88 +1,89 @@
 /*------------- #NEWS-FEED-FORM --------------*/
 
-
 .news-feed-form {
   overflow: hidden;
 
   .form-group.with-icon::after {
-	display: none;
+    display: none;
   }
 
   .nav-tabs .nav-link {
-	padding: 20px;
-	border: none;
-	border-bottom: 1px solid $border-color;
-	border-right: 1px solid $border-color;
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
   }
 
   .nav-tabs .nav-link.active {
-	background-color: $white-color;
-	fill: $primary-color;
-	color: #515365;
-	border-bottom: transparent;
+    background-color: $white-color;
+    fill: $primary-color;
+    color: #515365;
+    border-bottom: transparent;
   }
 
   .nav-tabs {
-	background-color: #fafbfd;
-	border-bottom: none;
+    background-color: #fafbfd;
+    border-bottom: none;
   }
 
   .nav-link {
-	fill: $body-font-color;
-	color: $body-font-color;
+    fill: $body-font-color;
+    color: $body-font-color;
 
-	svg {
-	  margin-right: 10px;
-	  width: 18px;
-	}
+    svg {
+      margin-right: 10px;
+      width: 18px;
+    }
 
-	.olymp-status-icon {
-	  width: 20px;
-	}
+    .olymp-status-icon {
+      width: 20px;
+    }
   }
 
   textarea {
-	min-height: 160px;
-	border-radius: 0;
-	border-top: none;
-	border-left: none;
-	border-right: none;
+    min-height: 160px;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
   }
 
   .form-group.label-floating.is-focused .control-label,
   .form-group.label-floating.has-bootstrap-select .control-label {
-	top: 16px;
+    top: 16px;
   }
 
   .options-message {
-	margin-top: 7px;
+    margin-top: 7px;
 
-	svg {
-	  width: 22px;
-	  height: 22px;
-	}
+    svg {
+      width: 22px;
+      height: 22px;
+    }
 
-	&:hover {
-	  fill: $icon-color;
-	}
+    &:hover {
+      fill: $icon-color;
+    }
   }
 
   form {
-	position: relative;
+    position: relative;
   }
 
   .author-thumb {
-	position: absolute;
-	top: 25px;
-	left: 25px;
-	z-index: 1;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 1;
+    img {
+      max-width: 100%;
+    }
   }
 
   .form-group {
-	margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
-
 
 /*------------- #NEWS-FEED-Masonry --------------*/
 
@@ -92,21 +93,19 @@
   list-style: none;
 
   &.cat-list__item-bg-blue {
+    .cat-list__item {
+      display: inline-block;
 
-	.cat-list__item {
-	  display: inline-block;
+      a {
+        &:hover {
+          background-color: $blue;
+        }
+      }
 
-	  a {
-
-		&:hover {
-		  background-color: $blue;
-		}
-	  }
-
-	  &.active {
-		background-color: $blue;
-	  }
-	}
+      &.active {
+        background-color: $blue;
+      }
+    }
   }
 }
 
@@ -118,52 +117,50 @@
   overflow: hidden;
 
   a {
-	font-size: 14px;
-	color: $body-font-color;
-	position: relative;
-	text-transform: capitalize;
-	transition: all .3s ease;
-	padding: 10px 20px;
-	display: block;
+    font-size: 14px;
+    color: $body-font-color;
+    position: relative;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    display: block;
 
-	&:hover {
-	  color: $white-color;
-	  background-color: $primary-color;
-	}
+    &:hover {
+      color: $white-color;
+      background-color: $primary-color;
+    }
   }
 
   &.active {
-	background-color: $primary-color;
+    background-color: $primary-color;
 
-	a {
-	  color: $white-color;
-	}
+    a {
+      color: $white-color;
+    }
   }
 }
-
 
 /*================= Responsive Mode ============*/
 
-
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .cat-list-bg-style {
-	margin: 30px 0;
+    margin: 30px 0;
   }
 
   .cat-list-bg-style.cat-list__item-bg-blue .cat-list__item {
-	display: block;
-	margin-top: 10px;
+    display: block;
+    margin-top: 10px;
   }
 }
 
-@media(max-width: 460px) {
+@media (max-width: 460px) {
   .news-feed-form .nav-tabs .nav-link {
-	padding: 12px;
-	text-align: center;
+    padding: 12px;
+    text-align: center;
   }
 
   .news-feed-form .nav-link svg {
-	display: block;
-	margin: 0 auto;
+    display: block;
+    margin: 0 auto;
   }
 }

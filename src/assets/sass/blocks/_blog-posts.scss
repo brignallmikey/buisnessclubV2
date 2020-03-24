@@ -407,6 +407,9 @@
 .author-date {
   .author-thumb {
     margin-right: 13px;
+    img {
+      max-width: 100%;
+    }
   }
 
   &.not-uppercase {
@@ -797,6 +800,9 @@
 
   .author-date .author-thumb {
     margin-right: 8px;
+    img {
+      max-width: 100%;
+    }
   }
 
   .choose-reaction {

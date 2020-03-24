@@ -1,6 +1,5 @@
 /*------------- #UI-BLOCK --------------*/
 
-
 .ui-block {
   background-color: $white-color;
   border-radius: 5px;
@@ -29,7 +28,7 @@
   }
 
   & > * {
-	margin-bottom: 0;
+    margin-bottom: 0;
     display: table-cell;
     vertical-align: middle;
   }
@@ -54,11 +53,11 @@
     & + * {
       margin-left: 20px;
     }
-
   }
 
   &.inline-items {
     .more {
+      width: 16px;
       float: right;
       margin-top: 6px;
       padding-left: 0;
@@ -72,7 +71,6 @@
   .icon-add {
     margin-right: 0;
   }
-
 }
 
 #accordion + .ui-block-title {
@@ -84,13 +82,10 @@
   padding: 24px 23px 23px;
 }
 
-
-
 /*------------- Responsive mode styles --------------*/
 
 @media (max-width: 1200px) {
   .responsive-flex1200 {
-
     .ui-block-title {
       display: flex;
       flex-direction: column;
@@ -120,7 +115,6 @@
 
 @media (max-width: 860px) {
   .responsive-flex {
-
     .w-search {
       width: auto;
     }
@@ -129,8 +123,7 @@
 
 @media (max-width: 768px) {
   .responsive-flex {
-
-    .ui-block-title  {
+    .ui-block-title {
       display: flex;
       flex-direction: column;
 
@@ -159,6 +152,7 @@
 
     .more {
       padding-left: 0;
+      width: 16px;
     }
 
     .photo-gallery {
@@ -195,7 +189,7 @@
         display: block;
       }
 
-       & > * + * {
+      & > * + * {
         margin-top: 15px;
       }
 
@@ -209,7 +203,6 @@
     }
   }
 }
-
 
 @media (max-width: 480px) {
   .ui-block-content.display-flex.content-around {
@@ -227,5 +220,3 @@
     margin-top: 15px;
   }
 }
-
-
