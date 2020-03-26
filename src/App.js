@@ -14,6 +14,8 @@ import ProfileHeader from "./components/ProfileHeader";
 import ProfilePost from "./components/ProfilePost";
 import ProfileTimeline from "./components/ProfileTimeline";
 import ProfileAbout from "./components/ProfileAbout";
+import ProfileFriends from "./components/ProfileFriends";
+import ProfilePictures from "./components/ProfilePictures";
 
 {/*import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
@@ -49,8 +51,8 @@ function App() {
 
         */}<Route exact path='/profile/' render={props => <ProfileTimeline {...props} />} />
         <Route path='/profile/about' render={props => <ProfileAbout {...props} />} />
-        {/*<Route exact path='/profile/friends' render={props => <ProfileFriendsPage {...props} />} />
-        <Route exact path='/profile/photos' render={props => <ProfilePhotosPage {...props} />} />
+        <Route exact path='/profile/friends' render={props => <ProfileFriends {...props} />} />
+        <Route exact path='/profile/photos' render={props => <ProfilePictures {...props} />} />{/*}
         <Route exact path='/profile/videos' render={props => <ProfileVideosPage {...props} />} />
 
         <Route exact path='/profile/settings' render={props => <Settings {...props} />} />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import banner from "../assets/images/pier.jpg";
 import profilePic from "../assets/images/profile.jpg";
 import { MdSettings } from "react-icons/md";
@@ -23,25 +24,28 @@ function ProfileHeader() {
                     <div className='col col-lg-5 col-md-5 col-sm-12 col-12'>
                       <ul className='profile-menu'>
                         <li>
-                          <a href='02-ProfilePage.html' className='active'>
+                          <Link to="/profile" className='active' onClick={() => console.log("Timeline")}>
                             Timeline
-                          </a>
+                            </Link>
+                          </li>
+                        <li>
+                        <Link to="/profile/about" onClick={() => console.log("About")}>
+                            About
+                            </Link>
                         </li>
                         <li>
-                          <a href='05-ProfilePage-About.html'>About</a>
-                        </li>
-                        <li>
-                          <a href='06-ProfilePage.html'>Friends</a>
+                        <Link to="/profile/friends" onClick={() => console.log("Friends")}>
+                            Friends
+                            </Link>
                         </li>
                       </ul>
                     </div>
                     <div className='col col-lg-5 ml-auto col-md-5 col-sm-12 col-12'>
                       <ul className='profile-menu'>
                         <li>
-                          <a href='07-ProfilePage-Photos.html'>Photos</a>
-                        </li>
-                        <li>
-                          <a href='09-ProfilePage-Videos.html'>Videos</a>
+                        <Link to="/profile/photos" onClick={() => console.log("Photos")}>
+                            Photos
+                            </Link>
                         </li>
                         <li>
                           <div className='more'>

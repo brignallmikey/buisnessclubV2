@@ -72,7 +72,7 @@ function Info() {
 						</li>
 					</ul>
 					
-					{/*end info start socials*/}}
+					{/*end info start socials*/}
 					
 					<div className="widget w-socials">
 						<h6 className="title">Other Social Networks:</h6>
