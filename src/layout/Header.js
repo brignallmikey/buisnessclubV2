@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+
 import profilePic from "../assets/images/profile.jpg";
 import { IoMdHappy, IoIosLogOut } from "react-icons/io";
 import { AiTwotoneThunderbolt } from "react-icons/ai";
@@ -515,7 +517,12 @@ function Header() {
               </div>
               <a href='02-ProfilePage.html' className='author-name fn'>
                 <div className='author-title'>
-                  James Spiegel <MdArrowDropDown />
+               <Router>
+                  <Link to="/profile" onClick={() => console.log("Timeline")}>
+                            James Speigel
+                            </Link>
+                            </Router>
+                             <MdArrowDropDown />
                 </div>
                 <span className='author-subtitle'>SPACE COWBOY</span>
               </a>
