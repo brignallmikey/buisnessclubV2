@@ -1,444 +1,517 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
+import HeaderIn from "../components/HeaderIn";
+import HeaderOut from "../components/HeaderOut";
+
 import profilePic from "../assets/images/profile.jpg";
 import { IoMdHappy, IoIosLogOut } from "react-icons/io";
 import { AiTwotoneThunderbolt } from "react-icons/ai";
-import { FaEllipsisH, FaRegCommentDots, FaHeart, FaStar, FaCheck } from "react-icons/fa";
+import {
+  FaEllipsisH,
+  FaRegCommentDots,
+  FaHeart,
+  FaStar,
+  FaCheck
+} from "react-icons/fa";
 import { MdDelete, MdLocalPostOffice, MdArrowDropDown } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
+
+const signedIn = true;
+
+const ProfileIn = () => {
+  if (signedIn === true) {
+    return <HeaderIn />;
+  } else {
+    return null;
+  }
+};
+
+const ProfileOut = () => {
+  if (signedIn === false) {
+    return <HeaderOut />;
+  } else {
+    return null;
+  }
+};
 
 function Header() {
   return (
     <div>
-      <header className='header' id='site-header'>
-        <div className='page-title'>
+      <header className="header" id="site-header">
+        <div className="page-title">
           <h6>Profile</h6>
         </div>
 
-        <div className='header-content-wrapper'>
-          <div className='control-block'>
-            <div className='control-icon more has-items'>
+        <div className="header-content-wrapper">
+          <div className="control-block">
+            <div className="control-icon more has-items">
               <IoMdHappy />
             </div>
 
-            <div className='more-dropdown more-with-triangle triangle-top-center'>
-              <div className='ui-block-title ui-block-title-small'>
-                <h6 className='title'>FRIEND REQUESTS</h6>
-                <a href='#'>Find Friends</a>
-                <a href='#'>Settings</a>
+            <div className="more-dropdown more-with-triangle triangle-top-center">
+              <div className="ui-block-title ui-block-title-small">
+                <h6 className="title">FRIEND REQUESTS</h6>
+                <a href="#">Find Friends</a>
+                <a href="#">Settings</a>
               </div>
 
-              <div className='mCustomScrollbar' data-mcs-theme='dark'>
-                <ul className='notification-list friend-requests'>
+              <div className="mCustomScrollbar" data-mcs-theme="dark">
+                <ul className="notification-list friend-requests">
                   <li>
-                    <div className='author-thumb'>
-                      <img src={profilePic} alt='author' />
+                    <div className="author-thumb">
+                      <img src={profilePic} alt="author" />
                     </div>
-                    <div className='notification-event'>
-                      <a href='#' className='h6 notification-friend'>
+                    <div className="notification-event">
+                      <a href="#" className="h6 notification-friend">
                         Tamara Romanoff
                       </a>
-                      <span className='chat-message-item'>Mutual Friend: Sarah Hetfield</span>
+                      <span className="chat-message-item">
+                        Mutual Friend: Sarah Hetfield
+                      </span>
                     </div>
-                    <span className='notification-icon'>
-                      <a href='#' className='accept-request'>
-                        <span className='icon-add without-text'>
+                    <span className="notification-icon">
+                      <a href="#" className="accept-request">
+                        <span className="icon-add without-text">
                           <IoMdHappy />
                         </span>
                       </a>
 
-                      <a href='#' className='accept-request request-del'>
-                        <span className='icon-minus'>
+                      <a href="#" className="accept-request request-del">
+                        <span className="icon-minus">
                           <IoMdHappy />
                         </span>
                       </a>
                     </span>
 
-                    <div className='more'>
+                    <div className="more">
                       <FaEllipsisH />
                     </div>
                   </li>
 
                   <li>
-                    <div className='author-thumb'>
-                      <img src={profilePic} alt='author' />
+                    <div className="author-thumb">
+                      <img src={profilePic} alt="author" />
                     </div>
-                    <div className='notification-event'>
-                      <a href='#' className='h6 notification-friend'>
+                    <div className="notification-event">
+                      <a href="#" className="h6 notification-friend">
                         Tony Stevens
                       </a>
-                      <span className='chat-message-item'>4 Friends in Common</span>
+                      <span className="chat-message-item">
+                        4 Friends in Common
+                      </span>
                     </div>
-                    <span className='notification-icon'>
-                      <a href='#' className='accept-request'>
-                        <span className='icon-add without-text'>
+                    <span className="notification-icon">
+                      <a href="#" className="accept-request">
+                        <span className="icon-add without-text">
                           <IoMdHappy />
                         </span>
                       </a>
 
-                      <a href='#' className='accept-request request-del'>
-                        <span className='icon-minus'>
+                      <a href="#" className="accept-request request-del">
+                        <span className="icon-minus">
                           <IoMdHappy />
                         </span>
                       </a>
                     </span>
 
-                    <div className='more'>
+                    <div className="more">
                       <FaEllipsisH />
                     </div>
                   </li>
 
-                  <li className='accepted'>
-                    <div className='author-thumb'>
-                      <img src={profilePic} alt='author' />
+                  <li className="accepted">
+                    <div className="author-thumb">
+                      <img src={profilePic} alt="author" />
                     </div>
-                    <div className='notification-event'>
+                    <div className="notification-event">
                       You and{" "}
-                      <a href='#' className='h6 notification-friend'>
+                      <a href="#" className="h6 notification-friend">
                         Mary Jane Stark
                       </a>{" "}
                       just became friends. Write on{" "}
-                      <a href='#' className='notification-link'>
+                      <a href="#" className="notification-link">
                         her wall
                       </a>
                       .
                     </div>
-                    <span className='notification-icon'>
+                    <span className="notification-icon">
                       <IoMdHappy />
                     </span>
 
-                    <div className='more'>
+                    <div className="more">
                       <FaEllipsisH />
                       <MdDelete />
                     </div>
                   </li>
 
                   <li>
-                    <div className='author-thumb'>
-                      <img src={profilePic} alt='author' />
+                    <div className="author-thumb">
+                      <img src={profilePic} alt="author" />
                     </div>
-                    <div className='notification-event'>
-                      <a href='#' className='h6 notification-friend'>
+                    <div className="notification-event">
+                      <a href="#" className="h6 notification-friend">
                         Stagg Clothing
                       </a>
-                      <span className='chat-message-item'>9 Friends in Common</span>
+                      <span className="chat-message-item">
+                        9 Friends in Common
+                      </span>
                     </div>
-                    <span className='notification-icon'>
-                      <a href='#' className='accept-request'>
-                        <span className='icon-add without-text'>
+                    <span className="notification-icon">
+                      <a href="#" className="accept-request">
+                        <span className="icon-add without-text">
                           <IoMdHappy />
                         </span>
                       </a>
 
-                      <a href='#' className='accept-request request-del'>
-                        <span className='icon-minus'>
+                      <a href="#" className="accept-request request-del">
+                        <span className="icon-minus">
                           <IoMdHappy />
                         </span>
                       </a>
                     </span>
 
-                    <div className='more'>
+                    <div className="more">
                       <FaEllipsisH />
                     </div>
                   </li>
                 </ul>
               </div>
 
-              <a href='#' className='view-all bg-blue'>
+              <a href="#" className="view-all bg-blue">
                 Check all your Events
               </a>
             </div>
           </div>
 
-          <div className='icons'>
-            <div className='control-icon more has-items'>
+          <div className="icons">
+            <div className="control-icon more has-items">
               <FaRegCommentDots />
-              <div className='label-avatar bg-purple'>2</div>
+              <div className="label-avatar bg-purple">2</div>
 
-              <div className='more-dropdown more-with-triangle triangle-top-center'>
-                <div className='ui-block-title ui-block-title-small'>
-                  <h6 className='title'>Chat / Messages</h6>
-                  <a href='#'>Mark all as read</a>
-                  <a href='#'>Settings</a>
+              <div className="more-dropdown more-with-triangle triangle-top-center">
+                <div className="ui-block-title ui-block-title-small">
+                  <h6 className="title">Chat / Messages</h6>
+                  <a href="#">Mark all as read</a>
+                  <a href="#">Settings</a>
                 </div>
 
-                <div className='mCustomScrollbar' data-mcs-theme='dark'>
-                  <ul className='notification-list chat-message'>
-                    <li className='message-unread'>
-                      <div className='author-thumb'>
-                        <img src={profilePic} alt='author' />
+                <div className="mCustomScrollbar" data-mcs-theme="dark">
+                  <ul className="notification-list chat-message">
+                    <li className="message-unread">
+                      <div className="author-thumb">
+                        <img src={profilePic} alt="author" />
                       </div>
-                      <div className='notification-event'>
-                        <a href='#' className='h6 notification-friend'>
+                      <div className="notification-event">
+                        <a href="#" className="h6 notification-friend">
                           Diana Jameson
                         </a>
-                        <span className='chat-message-item'>Hi James! It’s Diana, I just wanted to let you know that we have to reschedule...</span>
-                        <span className='notification-date'>
-                          <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                        <span className="chat-message-item">
+                          Hi James! It’s Diana, I just wanted to let you know
+                          that we have to reschedule...
+                        </span>
+                        <span className="notification-date">
+                          <time
+                            className="entry-date updated"
+                            datetime="2004-07-24T18:18"
+                          >
                             4 hours ago
                           </time>
                         </span>
                       </div>
-                      <span className='notification-icon'>
+                      <span className="notification-icon">
                         <FaRegCommentDots />
                       </span>
-                      <div className='more'>
+                      <div className="more">
                         <FaRegCommentDots />
                       </div>
                     </li>
 
                     <li>
-                      <div className='author-thumb'>
-                        <img src={profilePic} alt='author' />
+                      <div className="author-thumb">
+                        <img src={profilePic} alt="author" />
                       </div>
-                      <div className='notification-event'>
-                        <a href='#' className='h6 notification-friend'>
+                      <div className="notification-event">
+                        <a href="#" className="h6 notification-friend">
                           Jake Parker
                         </a>
-                        <span className='chat-message-item'>Great, I’ll see you tomorrow!.</span>
-                        <span className='notification-date'>
-                          <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                        <span className="chat-message-item">
+                          Great, I’ll see you tomorrow!.
+                        </span>
+                        <span className="notification-date">
+                          <time
+                            className="entry-date updated"
+                            datetime="2004-07-24T18:18"
+                          >
                             4 hours ago
                           </time>
                         </span>
                       </div>
-                      <span className='notification-icon'>
+                      <span className="notification-icon">
                         <FaRegCommentDots />
                       </span>
 
-                      <div className='more'>
+                      <div className="more">
                         <FaEllipsisH />
                       </div>
                     </li>
                     <li>
-                      <div className='author-thumb'>
-                        <img src={profilePic} alt='author' />
+                      <div className="author-thumb">
+                        <img src={profilePic} alt="author" />
                       </div>
-                      <div className='notification-event'>
-                        <a href='#' className='h6 notification-friend'>
+                      <div className="notification-event">
+                        <a href="#" className="h6 notification-friend">
                           Elaine Dreyfuss
                         </a>
-                        <span className='chat-message-item'>We’ll have to check that at the office and see if the client is on board with...</span>
-                        <span className='notification-date'>
-                          <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                        <span className="chat-message-item">
+                          We’ll have to check that at the office and see if the
+                          client is on board with...
+                        </span>
+                        <span className="notification-date">
+                          <time
+                            className="entry-date updated"
+                            datetime="2004-07-24T18:18"
+                          >
                             Yesterday at 9:56pm
                           </time>
                         </span>
                       </div>
-                      <span className='notification-icon'>
+                      <span className="notification-icon">
                         <FaRegCommentDots />
                       </span>
-                      <div className='more'>
+                      <div className="more">
                         <FaEllipsisH />
                       </div>
                     </li>
 
-                    <li className='chat-group'>
-                      <div className='author-thumb'>
-                        <img src={profilePic} alt='author' />
-                        <img src={profilePic} alt='author' />
-                        <img src={profilePic} alt='author' />
-                        <img src={profilePic} alt='author' />
+                    <li className="chat-group">
+                      <div className="author-thumb">
+                        <img src={profilePic} alt="author" />
+                        <img src={profilePic} alt="author" />
+                        <img src={profilePic} alt="author" />
+                        <img src={profilePic} alt="author" />
                       </div>
-                      <div className='notification-event'>
-                        <a href='#' className='h6 notification-friend'>
+                      <div className="notification-event">
+                        <a href="#" className="h6 notification-friend">
                           You, Faye, Ed &amp; Jet +3
                         </a>
-                        <span className='last-message-author'>Ed:</span>
-                        <span className='chat-message-item'>Yeah! Seems fine by me!</span>
-                        <span className='notification-date'>
-                          <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                        <span className="last-message-author">Ed:</span>
+                        <span className="chat-message-item">
+                          Yeah! Seems fine by me!
+                        </span>
+                        <span className="notification-date">
+                          <time
+                            className="entry-date updated"
+                            datetime="2004-07-24T18:18"
+                          >
                             March 16th at 10:23am
                           </time>
                         </span>
                       </div>
-                      <span className='notification-icon'>
+                      <span className="notification-icon">
                         <FaRegCommentDots />
                       </span>
-                      <div className='more'>
+                      <div className="more">
                         <FaEllipsisH />
                       </div>
                     </li>
                   </ul>
                 </div>
 
-                <a href='#' className='view-all bg-purple'>
+                <a href="#" className="view-all bg-purple">
                   View All Messages
                 </a>
               </div>
             </div>
 
-            <div className='control-icon more has-items'>
+            <div className="control-icon more has-items">
               <AiTwotoneThunderbolt />
 
-              <div className='label-avatar bg-primary'>8</div>
+              <div className="label-avatar bg-primary">8</div>
 
-              <div className='more-dropdown more-with-triangle triangle-top-center'>
-                <div className='ui-block-title ui-block-title-small'>
-                  <h6 className='title'>Notifications</h6>
-                  <a href='#'>Mark all as read</a>
-                  <a href='#'>Settings</a>
+              <div className="more-dropdown more-with-triangle triangle-top-center">
+                <div className="ui-block-title ui-block-title-small">
+                  <h6 className="title">Notifications</h6>
+                  <a href="#">Mark all as read</a>
+                  <a href="#">Settings</a>
                 </div>
 
-                <div className='mCustomScrollbar' data-mcs-theme='dark'>
-                  <ul className='notification-list'>
+                <div className="mCustomScrollbar" data-mcs-theme="dark">
+                  <ul className="notification-list">
                     <li>
-                      <div className='author-thumb'>
-                        <img src={profilePic} alt='author' />
+                      <div className="author-thumb">
+                        <img src={profilePic} alt="author" />
                       </div>
-                      <div className='notification-event'>
+                      <div className="notification-event">
                         <div>
-                          <a href='#' className='h6 notification-friend'>
+                          <a href="#" className="h6 notification-friend">
                             Mathilda Brinker
                           </a>{" "}
                           commented on your new{" "}
-                          <a href='#' className='notification-link'>
+                          <a href="#" className="notification-link">
                             profile status
                           </a>
                           .
                         </div>
-                        <span className='notification-date'>
-                          <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                        <span className="notification-date">
+                          <time
+                            className="entry-date updated"
+                            datetime="2004-07-24T18:18"
+                          >
                             4 hours ago
                           </time>
                         </span>
                       </div>
-                      <span className='notification-icon'>
+                      <span className="notification-icon">
                         <MdLocalPostOffice />
                       </span>
 
-                      <div className='more'>
+                      <div className="more">
                         <FaEllipsisH />
                         <MdDelete />
                       </div>
                     </li>
 
-                    <li className='un-read'>
-                      <div className='author-thumb'>
-                        <img src={profilePic} alt='author' />
+                    <li className="un-read">
+                      <div className="author-thumb">
+                        <img src={profilePic} alt="author" />
                       </div>
-                      <div className='notification-event'>
+                      <div className="notification-event">
                         <div>
                           You and{" "}
-                          <a href='#' className='h6 notification-friend'>
+                          <a href="#" className="h6 notification-friend">
                             Nicholas Grissom
                           </a>{" "}
                           just became friends. Write on{" "}
-                          <a href='#' className='notification-link'>
+                          <a href="#" className="notification-link">
                             his wall
                           </a>
                           .
                         </div>
-                        <span className='notification-date'>
-                          <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                        <span className="notification-date">
+                          <time
+                            className="entry-date updated"
+                            datetime="2004-07-24T18:18"
+                          >
                             9 hours ago
                           </time>
                         </span>
                       </div>
-                      <span className='notification-icon'>
+                      <span className="notification-icon">
                         <IoMdHappy />
                       </span>
 
-                      <div className='more'>
+                      <div className="more">
                         <FaEllipsisH />
                         <MdDelete />
                       </div>
                     </li>
 
-                    <li className='with-comment-photo'>
-                      <div className='author-thumb'>
-                        <img src={profilePic} alt='author' />
+                    <li className="with-comment-photo">
+                      <div className="author-thumb">
+                        <img src={profilePic} alt="author" />
                       </div>
-                      <div className='notification-event'>
+                      <div className="notification-event">
                         <div>
-                          <a href='#' className='h6 notification-friend'>
+                          <a href="#" className="h6 notification-friend">
                             Sarah Hetfield
                           </a>{" "}
                           commented on your{" "}
-                          <a href='#' className='notification-link'>
+                          <a href="#" className="notification-link">
                             photo
                           </a>
                           .
                         </div>
-                        <span className='notification-date'>
-                          <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                        <span className="notification-date">
+                          <time
+                            className="entry-date updated"
+                            datetime="2004-07-24T18:18"
+                          >
                             Yesterday at 5:32am
                           </time>
                         </span>
                       </div>
-                      <span className='notification-icon'>
+                      <span className="notification-icon">
                         <MdLocalPostOffice />
                       </span>
 
-                      <div className='comment-photo'>
-                        <img src='img/comment-photo1.jpg' alt='photo' />
-                        <span>“She looks incredible in that outfit! We should see each...”</span>
+                      <div className="comment-photo">
+                        <img src="img/comment-photo1.jpg" alt="photo" />
+                        <span>
+                          “She looks incredible in that outfit! We should see
+                          each...”
+                        </span>
                       </div>
 
-                      <div className='more'>
+                      <div className="more">
                         <FaEllipsisH />
                         <MdDelete />
                       </div>
                     </li>
 
                     <li>
-                      <div className='author-thumb'>
-                        <img src={profilePic} alt='author' />
+                      <div className="author-thumb">
+                        <img src={profilePic} alt="author" />
                       </div>
-                      <div className='notification-event'>
+                      <div className="notification-event">
                         <div>
-                          <a href='#' className='h6 notification-friend'>
+                          <a href="#" className="h6 notification-friend">
                             Green Goo Rock
                           </a>{" "}
                           invited you to attend to his event Goo in{" "}
-                          <a href='#' className='notification-link'>
+                          <a href="#" className="notification-link">
                             Gotham Bar
                           </a>
                           .
                         </div>
-                        <span className='notification-date'>
-                          <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                        <span className="notification-date">
+                          <time
+                            className="entry-date updated"
+                            datetime="2004-07-24T18:18"
+                          >
                             March 5th at 6:43pm
                           </time>
                         </span>
                       </div>
-                      <span className='notification-icon'>
+                      <span className="notification-icon">
                         <IoMdHappy />
                       </span>
 
-                      <div className='more'>
+                      <div className="more">
                         <FaEllipsisH />
                         <MdDelete />
                       </div>
                     </li>
 
                     <li>
-                      <div className='author-thumb'>
-                        <img src={profilePic} alt='author' />
+                      <div className="author-thumb">
+                        <img src={profilePic} alt="author" />
                       </div>
-                      <div className='notification-event'>
+                      <div className="notification-event">
                         <div>
-                          <a href='#' className='h6 notification-friend'>
+                          <a href="#" className="h6 notification-friend">
                             James Summers
                           </a>{" "}
                           commented on your new{" "}
-                          <a href='#' className='notification-link'>
+                          <a href="#" className="notification-link">
                             profile status
                           </a>
                           .
                         </div>
-                        <span className='notification-date'>
-                          <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                        <span className="notification-date">
+                          <time
+                            className="entry-date updated"
+                            datetime="2004-07-24T18:18"
+                          >
                             March 2nd at 8:29pm
                           </time>
                         </span>
                       </div>
-                      <span className='notification-icon'>
+                      <span className="notification-icon">
                         <FaHeart />
                       </span>
 
-                      <div className='more'>
+                      <div className="more">
                         <FaEllipsisH />
                         <MdDelete />
                       </div>
@@ -446,116 +519,54 @@ function Header() {
                   </ul>
                 </div>
 
-                <a href='#' className='view-all bg-primary'>
+                <a href="#" className="view-all bg-primary">
                   View All Notifications
                 </a>
               </div>
             </div>
 
-            <div className='author-page author vcard inline-items more'>
-              <div className='author-thumb'>
-                <img alt='author' src={profilePic} className='avatar' style={{ width: "28px" }} />
-                <span className='icon-status online'></span>
-                <div className='more-dropdown more-with-triangle'>
-                  <div className='mCustomScrollbar' data-mcs-theme='dark'>
-                    <div className='ui-block-title ui-block-title-small'>
-                      <h6 className='title'>Your Account</h6>
-                    </div>
-
-                    <ul className='account-settings'>
-                      <li>
-                        <a href='29-YourAccount-AccountSettings.html'>
-                          <GiHamburgerMenu />
-
-                          <span>Profile Settings</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href='36-FavPage-SettingsAndCreatePopup.html'>
-                          <FaStar />
-
-                          <span>Create Fav Page</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href='#'>
-                          <IoIosLogOut />
-
-                          <span>Log Out</span>
-                        </a>
-                      </li>
-                    </ul>
-
-                    <div className='ui-block-title ui-block-title-small'>
-                      <h6 className='title'>About Club</h6>
-                    </div>
-
-                    <ul>
-                      <li>
-                        <a href='#'>
-                          <span>Terms and Conditions</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href='#'>
-                          <span>FAQs</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href='#'>
-                          <span>Jobs</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href='#'>
-                          <span>Contact</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <a href='02-ProfilePage.html' className='author-name fn'>
-                <div className='author-title'>
-               <Router>
-                  <Link to="/profile" onClick={() => console.log("Timeline")}>
-                            James Speigel
-                            </Link>
-                            </Router>
-                             <MdArrowDropDown />
-                </div>
-                <span className='author-subtitle'>SPACE COWBOY</span>
-              </a>
-            </div>
+            <ProfileIn />
           </div>
+
+          <ProfileOut />
         </div>
       </header>
 
-      <header className='header header-responsive' id='site-header-responsive'>
-        <div className='header-content-wrapper'>
-          <ul className='nav nav-tabs mobile-app-tabs' role='tablist'>
-            <li className='nav-item'>
-              <a className='nav-link' data-toggle='tab' href='#request' role='tab'>
-                <div className='control-icon has-items'>
+      <header className="header header-responsive" id="site-header-responsive">
+        <div className="header-content-wrapper">
+          <ul className="nav nav-tabs mobile-app-tabs" role="tablist">
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                data-toggle="tab"
+                href="#request"
+                role="tab"
+              >
+                <div className="control-icon has-items">
                   <IoMdHappy />
                 </div>
               </a>
             </li>
 
-            <li className='nav-item'>
-              <a className='nav-link' data-toggle='tab' href='#chat' role='tab'>
-                <div className='control-icon has-items'>
+            <li className="nav-item">
+              <a className="nav-link" data-toggle="tab" href="#chat" role="tab">
+                <div className="control-icon has-items">
                   <FaRegCommentDots />
-                  <div className='label-avatar bg-purple'>2</div>
+                  <div className="label-avatar bg-purple">2</div>
                 </div>
               </a>
             </li>
 
-            <li className='nav-item'>
-              <a className='nav-link' data-toggle='tab' href='#notification' role='tab'>
-                <div className='control-icon has-items'>
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                data-toggle="tab"
+                href="#notification"
+                role="tab"
+              >
+                <div className="control-icon has-items">
                   <AiTwotoneThunderbolt />
-                  <div className='label-avatar bg-primary'>8</div>
+                  <div className="label-avatar bg-primary">8</div>
                 </div>
               </a>
             </li>
@@ -563,373 +574,408 @@ function Header() {
         </div>
 
         {/* Tab panes */}
-        <div className='tab-content tab-content-responsive'>
-          <div className='tab-pane ' id='request' role='tabpanel'>
-            <div className='mCustomScrollbar' data-mcs-theme='dark'>
-              <div className='ui-block-title ui-block-title-small'>
-                <h6 className='title'>FRIEND REQUESTS</h6>
-                <a href='#'>Find Friends</a>
-                <a href='#'>Settings</a>
+        <div className="tab-content tab-content-responsive">
+          <div className="tab-pane " id="request" role="tabpanel">
+            <div className="mCustomScrollbar" data-mcs-theme="dark">
+              <div className="ui-block-title ui-block-title-small">
+                <h6 className="title">FRIEND REQUESTS</h6>
+                <a href="#">Find Friends</a>
+                <a href="#">Settings</a>
               </div>
-              <ul className='notification-list friend-requests'>
+              <ul className="notification-list friend-requests">
                 <li>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
+                  <div className="author-thumb">
+                    <img src={profilePic} alt="author" />
                   </div>
-                  <div className='notification-event'>
-                    <a href='#' className='h6 notification-friend'>
+                  <div className="notification-event">
+                    <a href="#" className="h6 notification-friend">
                       Tamara Romanoff
                     </a>
-                    <span className='chat-message-item'>Mutual Friend: Sarah Hetfield</span>
+                    <span className="chat-message-item">
+                      Mutual Friend: Sarah Hetfield
+                    </span>
                   </div>
-                  <span className='notification-icon'>
-                    <a href='#' className='accept-request'>
-                      <span className='icon-add without-text'>
+                  <span className="notification-icon">
+                    <a href="#" className="accept-request">
+                      <span className="icon-add without-text">
                         <IoMdHappy />
                       </span>
                     </a>
 
-                    <a href='#' className='accept-request request-del'>
-                      <span className='icon-minus'>
+                    <a href="#" className="accept-request request-del">
+                      <span className="icon-minus">
                         <IoMdHappy />
                       </span>
                     </a>
                   </span>
 
-                  <div className='more'>
+                  <div className="more">
                     <FaEllipsisH />
                   </div>
                 </li>
                 <li>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
+                  <div className="author-thumb">
+                    <img src={profilePic} alt="author" />
                   </div>
-                  <div className='notification-event'>
-                    <a href='#' className='h6 notification-friend'>
+                  <div className="notification-event">
+                    <a href="#" className="h6 notification-friend">
                       Tony Stevens
                     </a>
-                    <span className='chat-message-item'>4 Friends in Common</span>
+                    <span className="chat-message-item">
+                      4 Friends in Common
+                    </span>
                   </div>
-                  <span className='notification-icon'>
-                    <a href='#' className='accept-request'>
-                      <span className='icon-add without-text'>
+                  <span className="notification-icon">
+                    <a href="#" className="accept-request">
+                      <span className="icon-add without-text">
                         <IoMdHappy />
                       </span>
                     </a>
 
-                    <a href='#' className='accept-request request-del'>
-                      <span className='icon-minus'>
+                    <a href="#" className="accept-request request-del">
+                      <span className="icon-minus">
                         <IoMdHappy />
                       </span>
                     </a>
                   </span>
 
-                  <div className='more'>
+                  <div className="more">
                     <FaEllipsisH />
                   </div>
                 </li>
-                <li className='accepted'>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
+                <li className="accepted">
+                  <div className="author-thumb">
+                    <img src={profilePic} alt="author" />
                   </div>
-                  <div className='notification-event'>
+                  <div className="notification-event">
                     You and{" "}
-                    <a href='#' className='h6 notification-friend'>
+                    <a href="#" className="h6 notification-friend">
                       Mary Jane Stark
                     </a>{" "}
                     just became friends. Write on{" "}
-                    <a href='#' className='notification-link'>
+                    <a href="#" className="notification-link">
                       her wall
                     </a>
                     .
                   </div>
-                  <span className='notification-icon'>
+                  <span className="notification-icon">
                     <IoMdHappy />
                   </span>
 
-                  <div className='more'>
+                  <div className="more">
                     <FaEllipsisH />
                     <MdDelete />
                   </div>
                 </li>
                 <li>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
+                  <div className="author-thumb">
+                    <img src={profilePic} alt="author" />
                   </div>
-                  <div className='notification-event'>
-                    <a href='#' className='h6 notification-friend'>
+                  <div className="notification-event">
+                    <a href="#" className="h6 notification-friend">
                       Stagg Clothing
                     </a>
-                    <span className='chat-message-item'>9 Friends in Common</span>
+                    <span className="chat-message-item">
+                      9 Friends in Common
+                    </span>
                   </div>
-                  <span className='notification-icon'>
-                    <a href='#' className='accept-request'>
-                      <span className='icon-add without-text'>
+                  <span className="notification-icon">
+                    <a href="#" className="accept-request">
+                      <span className="icon-add without-text">
                         <IoMdHappy />
                       </span>
                     </a>
 
-                    <a href='#' className='accept-request request-del'>
-                      <span className='icon-minus'>
+                    <a href="#" className="accept-request request-del">
+                      <span className="icon-minus">
                         <IoMdHappy />
                       </span>
                     </a>
                   </span>
 
-                  <div className='more'>
+                  <div className="more">
                     <FaEllipsisH />
                   </div>
                 </li>
               </ul>
-              <a href='#' className='view-all bg-blue'>
+              <a href="#" className="view-all bg-blue">
                 Check all your Events
               </a>
             </div>
           </div>
 
-          <div className='tab-pane ' id='chat' role='tabpanel'>
-            <div className='mCustomScrollbar' data-mcs-theme='dark'>
-              <div className='ui-block-title ui-block-title-small'>
-                <h6 className='title'>Chat / Messages</h6>
-                <a href='#'>Mark all as read</a>
-                <a href='#'>Settings</a>
+          <div className="tab-pane " id="chat" role="tabpanel">
+            <div className="mCustomScrollbar" data-mcs-theme="dark">
+              <div className="ui-block-title ui-block-title-small">
+                <h6 className="title">Chat / Messages</h6>
+                <a href="#">Mark all as read</a>
+                <a href="#">Settings</a>
               </div>
 
-              <ul className='notification-list chat-message'>
-                <li className='message-unread'>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
+              <ul className="notification-list chat-message">
+                <li className="message-unread">
+                  <div className="author-thumb">
+                    <img src={profilePic} alt="author" />
                   </div>
-                  <div className='notification-event'>
-                    <a href='#' className='h6 notification-friend'>
+                  <div className="notification-event">
+                    <a href="#" className="h6 notification-friend">
                       Diana Jameson
                     </a>
-                    <span className='chat-message-item'>Hi James! It’s Diana, I just wanted to let you know that we have to reschedule...</span>
-                    <span className='notification-date'>
-                      <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                    <span className="chat-message-item">
+                      Hi James! It’s Diana, I just wanted to let you know that
+                      we have to reschedule...
+                    </span>
+                    <span className="notification-date">
+                      <time
+                        className="entry-date updated"
+                        datetime="2004-07-24T18:18"
+                      >
                         4 hours ago
                       </time>
                     </span>
                   </div>
-                  <span className='notification-icon'>
+                  <span className="notification-icon">
                     <FaRegCommentDots />
                   </span>
-                  <div className='more'>
+                  <div className="more">
                     <FaEllipsisH />
                   </div>
                 </li>
 
                 <li>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
+                  <div className="author-thumb">
+                    <img src={profilePic} alt="author" />
                   </div>
-                  <div className='notification-event'>
-                    <a href='#' className='h6 notification-friend'>
+                  <div className="notification-event">
+                    <a href="#" className="h6 notification-friend">
                       Jake Parker
                     </a>
-                    <span className='chat-message-item'>Great, I’ll see you tomorrow!.</span>
-                    <span className='notification-date'>
-                      <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                    <span className="chat-message-item">
+                      Great, I’ll see you tomorrow!.
+                    </span>
+                    <span className="notification-date">
+                      <time
+                        className="entry-date updated"
+                        datetime="2004-07-24T18:18"
+                      >
                         4 hours ago
                       </time>
                     </span>
                   </div>
-                  <span className='notification-icon'>
+                  <span className="notification-icon">
                     <FaRegCommentDots />
                   </span>
 
-                  <div className='more'>
+                  <div className="more">
                     <FaEllipsisH />
                   </div>
                 </li>
               </ul>
 
-              <a href='#' className='view-all bg-purple'>
+              <a href="#" className="view-all bg-purple">
                 View All Messages
               </a>
             </div>
           </div>
 
-          <div className='tab-pane ' id='notification' role='tabpanel'>
-            <div className='mCustomScrollbar' data-mcs-theme='dark'>
-              <div className='ui-block-title ui-block-title-small'>
-                <h6 className='title'>Notifications</h6>
-                <a href='#'>Mark all as read</a>
-                <a href='#'>Settings</a>
+          <div className="tab-pane " id="notification" role="tabpanel">
+            <div className="mCustomScrollbar" data-mcs-theme="dark">
+              <div className="ui-block-title ui-block-title-small">
+                <h6 className="title">Notifications</h6>
+                <a href="#">Mark all as read</a>
+                <a href="#">Settings</a>
               </div>
 
-              <ul className='notification-list'>
+              <ul className="notification-list">
                 <li>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
+                  <div className="author-thumb">
+                    <img src={profilePic} alt="author" />
                   </div>
-                  <div className='notification-event'>
+                  <div className="notification-event">
                     <div>
-                      <a href='#' className='h6 notification-friend'>
+                      <a href="#" className="h6 notification-friend">
                         Mathilda Brinker
                       </a>{" "}
                       commented on your new{" "}
-                      <a href='#' className='notification-link'>
+                      <a href="#" className="notification-link">
                         profile status
                       </a>
                       .
                     </div>
-                    <span className='notification-date'>
-                      <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                    <span className="notification-date">
+                      <time
+                        className="entry-date updated"
+                        datetime="2004-07-24T18:18"
+                      >
                         4 hours ago
                       </time>
                     </span>
                   </div>
-                  <span className='notification-icon'>
+                  <span className="notification-icon">
                     <MdLocalPostOffice />
                   </span>
 
-                  <div className='more'>
+                  <div className="more">
                     <FaEllipsisH />
                     <MdDelete />
                   </div>
                 </li>
 
-                <li className='un-read'>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
+                <li className="un-read">
+                  <div className="author-thumb">
+                    <img src={profilePic} alt="author" />
                   </div>
-                  <div className='notification-event'>
+                  <div className="notification-event">
                     <div>
                       You and{" "}
-                      <a href='#' className='h6 notification-friend'>
+                      <a href="#" className="h6 notification-friend">
                         Nicholas Grissom
                       </a>{" "}
                       just became friends. Write on{" "}
-                      <a href='#' className='notification-link'>
+                      <a href="#" className="notification-link">
                         his wall
                       </a>
                       .
                     </div>
-                    <span className='notification-date'>
-                      <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                    <span className="notification-date">
+                      <time
+                        className="entry-date updated"
+                        datetime="2004-07-24T18:18"
+                      >
                         9 hours ago
                       </time>
                     </span>
                   </div>
-                  <span className='notification-icon'>
+                  <span className="notification-icon">
                     <IoMdHappy />
                   </span>
 
-                  <div className='more'>
+                  <div className="more">
                     <FaEllipsisH />
                     <MdDelete />
                   </div>
                 </li>
 
-                <li className='with-comment-photo'>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
+                <li className="with-comment-photo">
+                  <div className="author-thumb">
+                    <img src={profilePic} alt="author" />
                   </div>
-                  <div className='notification-event'>
+                  <div className="notification-event">
                     <div>
-                      <a href='#' className='h6 notification-friend'>
+                      <a href="#" className="h6 notification-friend">
                         Sarah Hetfield
                       </a>{" "}
                       commented on your{" "}
-                      <a href='#' className='notification-link'>
+                      <a href="#" className="notification-link">
                         photo
                       </a>
                       .
                     </div>
-                    <span className='notification-date'>
-                      <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                    <span className="notification-date">
+                      <time
+                        className="entry-date updated"
+                        datetime="2004-07-24T18:18"
+                      >
                         Yesterday at 5:32am
                       </time>
                     </span>
                   </div>
-                  <span className='notification-icon'>
+                  <span className="notification-icon">
                     <MdLocalPostOffice />
                   </span>
 
-                  <div className='comment-photo'>
-                    <img src='img/comment-photo1.jpg' alt='photo' />
-                    <span>“She looks incredible in that outfit! We should see each...”</span>
+                  <div className="comment-photo">
+                    <img src="img/comment-photo1.jpg" alt="photo" />
+                    <span>
+                      “She looks incredible in that outfit! We should see
+                      each...”
+                    </span>
                   </div>
 
-                  <div className='more'>
+                  <div className="more">
                     <FaEllipsisH />
                     <MdDelete />
                   </div>
                 </li>
 
                 <li>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
+                  <div className="author-thumb">
+                    <img src={profilePic} alt="author" />
                   </div>
-                  <div className='notification-event'>
+                  <div className="notification-event">
                     <div>
-                      <a href='#' className='h6 notification-friend'>
+                      <a href="#" className="h6 notification-friend">
                         Green Goo Rock
                       </a>{" "}
                       invited you to attend to his event Goo in{" "}
-                      <a href='#' className='notification-link'>
+                      <a href="#" className="notification-link">
                         Gotham Bar
                       </a>
                       .
                     </div>
-                    <span className='notification-date'>
-                      <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                    <span className="notification-date">
+                      <time
+                        className="entry-date updated"
+                        datetime="2004-07-24T18:18"
+                      >
                         March 5th at 6:43pm
                       </time>
                     </span>
                   </div>
-                  <span className='notification-icon'>
+                  <span className="notification-icon">
                     <IoMdHappy />
                   </span>
 
-                  <div className='more'>
+                  <div className="more">
                     <FaEllipsisH />
                     <MdDelete />
                   </div>
                 </li>
 
                 <li>
-                  <div className='author-thumb'>
-                    <img src={profilePic} alt='author' />
+                  <div className="author-thumb">
+                    <img src={profilePic} alt="author" />
                   </div>
-                  <div className='notification-event'>
+                  <div className="notification-event">
                     <div>
-                      <a href='#' className='h6 notification-friend'>
+                      <a href="#" className="h6 notification-friend">
                         James Summers
                       </a>{" "}
                       commented on your new{" "}
-                      <a href='#' className='notification-link'>
+                      <a href="#" className="notification-link">
                         profile status
                       </a>
                       .
                     </div>
-                    <span className='notification-date'>
-                      <time className='entry-date updated' datetime='2004-07-24T18:18'>
+                    <span className="notification-date">
+                      <time
+                        className="entry-date updated"
+                        datetime="2004-07-24T18:18"
+                      >
                         March 2nd at 8:29pm
                       </time>
                     </span>
                   </div>
-                  <span className='notification-icon'>
+                  <span className="notification-icon">
                     <FaHeart />
                   </span>
 
-                  <div className='more'>
+                  <div className="more">
                     <FaEllipsisH />
                     <MdDelete />
                   </div>
                 </li>
               </ul>
 
-              <a href='#' className='view-all bg-primary'>
+              <a href="#" className="view-all bg-primary">
                 View All Notifications
               </a>
             </div>
           </div>
 
-          <div className='tab-pane ' id='search' role='tabpanel'>
-            <form className='search-bar w-search notification-list friend-requests'>
-              <div className='form-group with-button'>
+          <div className="tab-pane " id="search" role="tabpanel">
+            <form className="search-bar w-search notification-list friend-requests">
+              <div className="form-group with-button">
                 {/*<input className="form-control js-user-search" placeholder="Search here people or pages..." type="text"/>*/}
               </div>
             </form>
@@ -939,7 +985,7 @@ function Header() {
       </header>
 
       {/* end Responsive Header-BP */}
-      <div className='header-spacer'></div>
+      <div className="header-spacer"></div>
     </div>
   );
 }
