@@ -21,7 +21,10 @@ import GroupLanding from "./pages/GroupLanding";
 
 import SettingsPage from "./pages/Settings";
 
-{/*import SignUp from "./pages/SignUp";
+import SignUp from "./pages/SignUp";
+
+{
+  /*import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
 import Newsfeed from "./pages/Newsfeed";
 
@@ -42,39 +45,64 @@ import GroupFriend from "./pages/GroupFriend";
 import GroupTimeline from "./pages/GroupTimeline";
 import GroupAbout from "./pages/GroupAbout";
 import GroupMembers from "./pages/GroupMembersPage";
-import GroupPhotos from "./pages/GroupPhotos";*/}
+import GroupPhotos from "./pages/GroupPhotos";*/
+}
 
 function App() {
   return (
     <div>
-      <Layout>
-              <Router>
-        {/*<Route exact path='/' render={props => <LogIn {...props} />} />
-        <Route exact path='/signup' render={props => <SignUp {...props} />} />
-        <Route exact path='/newsfeed' render={props => <Newsfeed {...props} />} />
+      <Router>
+        <Route exact path="/" render={props => <SignUp {...props} />} />
+        {/*<Route exact path='/signup' render={props => <SignUp {...props} />} />
+        <Route exact path='/newsfeed' render={props => <Newsfeed {...props} />} />*/}
 
-        */}<Route exact path='/profile' render={props => <ProfileTimeline {...props} />} />
-        <Route path='/profile/about' render={props => <ProfileAbout {...props} />} />
-        <Route exact path='/profile/friends' render={props => <ProfileFriends {...props} />} />
-        <Route exact path='/profile/photos' render={props => <ProfilePictures {...props} />} />{/*}
+        <Route
+          exact
+          path="/profile"
+          render={props => <ProfileTimeline {...props} />}
+        />
+        <Route
+          path="/profile/about"
+          render={props => <ProfileAbout {...props} />}
+        />
+        <Route
+          exact
+          path="/profile/friends"
+          render={props => <ProfileFriends {...props} />}
+        />
+        <Route
+          exact
+          path="/profile/photos"
+          render={props => <ProfilePictures {...props} />}
+        />
+        {/*}
         <Route exact path='/profile/videos' render={props => <ProfileVideosPage {...props} />} />
 
-        */}<Route exact path='/settings' render={props => <SettingsPage {...props} />} />{/*}
+        */}
+        <Route
+          exact
+          path="/settings"
+          render={props => <SettingsPage {...props} />}
+        />
+        {/*}
         <Route exact path='/profile/settings/personal' render={props => <Personal {...props} />} />
         <Route exact path='/profile/settings/account' render={props => <Account {...props} />} />
         <Route exact path='/profile/settings/password' render={props => <Password {...props} />} />
         <Route exact path='/profile/settings/hobbiesinterests' render={props => <HobbiesInterests {...props} />} />
         <Route exact path='/profile/settings/educationemployment' render={props => <EducationEmployment {...props} />} />
 
-        */}<Route exact path='/groups' render={props => <GroupLanding {...props} />} />{/*}
+        */}
+        <Route
+          exact
+          path="/groups"
+          render={props => <GroupLanding {...props} />}
+        />
+        {/*}
         <Route exact path='/groups/profile' render={props => <GroupTimeline {...props} />} />
         <Route exact path='/groups/profile/about' render={props => <GroupAbout {...props} />} />
         <Route exact path='/groups/profile/members' render={props => <GroupMembers {...props} />} />
   <Route exact path='/groups/profile/photos' render={props => <GroupPhotos {...props} />} />*/}
       </Router>
-      </Layout>
-
-
     </div>
   );
 }

@@ -11,15 +11,13 @@ import Layout from "../layout/Layout";
 
 function ProfilePage() {
   return (
-    <Layout>
-      <div className="container">
-        <Profileheader />
+    <div className="container">
+      <Profileheader />
 
-        <Timeline />
+      <Timeline />
 
-        {/*Options: Posts by user (Timeline), About the user (About), Users Friends (Friends), Users Photos (Photos), Users Videos (Videos)*/}
-      </div>
-    </Layout>
+      {/*Options: Posts by user (Timeline), About the user (About), Users Friends (Friends), Users Photos (Photos), Users Videos (Videos)*/}
+    </div>
   );
 }
 export default ProfilePage;

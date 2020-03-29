@@ -1,14 +1,7 @@
-import React from 'react';
-
+import React from "react";
 
 function Newsfeed() {
-  return (    
-    <div>
-	
-	
-	
-	</div>
-  );
+  return <div></div>;
 }
 
 export default Newsfeed;
