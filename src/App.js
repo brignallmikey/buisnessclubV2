@@ -22,6 +22,7 @@ import GroupLanding from "./pages/GroupLanding";
 import SettingsPage from "./pages/Settings";
 
 import SignUp from "./pages/SignUp";
+import Newsfeed from "./pages/Newsfeed";
 
 {
   /*import SignUp from "./pages/SignUp";
@@ -53,8 +54,12 @@ function App() {
     <div>
       <Router>
         <Route exact path="/" render={props => <SignUp {...props} />} />
-        {/*<Route exact path='/signup' render={props => <SignUp {...props} />} />
-        <Route exact path='/newsfeed' render={props => <Newsfeed {...props} />} />*/}
+        {/*<Route exact path='/signup' render={props => <SignUp {...props} />} />*/}
+        <Route
+          exact
+          path="/newsfeed"
+          render={props => <Newsfeed {...props} />}
+        />
 
         <Route
           exact
