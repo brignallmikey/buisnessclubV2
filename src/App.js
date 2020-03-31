@@ -18,6 +18,10 @@ import ProfileFriends from "./components/ProfileFriends";
 import ProfilePictures from "./components/ProfilePictures";
 
 import GroupLanding from "./pages/GroupLanding";
+import GroupTimeline from "./components/GroupTimeline";
+import GroupAbout from "./components/GroupAbout";
+import GroupPhotos from "./components/GroupPhotos";
+import GroupEvents from "./components/GroupEvents";
 
 import SettingsPage from "./pages/Settings";
 
@@ -102,6 +106,30 @@ function App() {
           path="/groups"
           render={props => <GroupLanding {...props} />}
         />
+
+        <Route
+          exact
+          path="/grouppage"
+          render={props => <GroupTimeline {...props} />}
+        />
+        <Route
+          exact
+          path="/grouppage/about"
+          render={props => <GroupAbout {...props} />}
+        />
+
+        <Route
+          exact
+          path="/grouppage/photos"
+          render={props => <GroupPhotos {...props} />}
+        />
+
+        <Route
+          exact
+          path="/grouppage/events"
+          render={props => <GroupEvents {...props} />}
+        />
+
         {/*}
         <Route exact path='/groups/profile' render={props => <GroupTimeline {...props} />} />
         <Route exact path='/groups/profile/about' render={props => <GroupAbout {...props} />} />

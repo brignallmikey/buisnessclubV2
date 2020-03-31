@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
-import GroupHeader from "../components/GroupHeader";
-import Layout from "../layout/Layout";
+import GroupPageHeader from "../components/GroupPageHeader";
+import Layout from "./Layout";
 
-const Group = props => {
+const GroupPageLayout = props => {
   return (
     <Layout>
       <Fragment>
-        <GroupHeader />
+        <GroupPageHeader />
         <div class="container">
           <div class="row">{props.children}</div>
         </div>
@@ -15,4 +15,4 @@ const Group = props => {
   );
 };
 
-export default Group;
+export default GroupPageLayout;

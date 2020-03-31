@@ -2,10 +2,11 @@ import React from "react";
 import GroupHeader from "../components/GroupHeader";
 import CreateGroupCard from "../components/CreateGroupCard";
 import GroupCard from "../components/GroupCard";
+import Layout from "../layout/Layout";
 
 function GroupLanding() {
   return (
-    <div>
+    <Layout>
       <GroupHeader />
 
       <div class="container">
@@ -20,7 +21,7 @@ function GroupLanding() {
           <GroupCard />
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 
