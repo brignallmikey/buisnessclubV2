@@ -4,6 +4,7 @@ import Header from "./Header";
 import SidebarLeft from "./SiderbarLeft";
 
 const Layout = props => {
+  console.log("Props LAYOUT COMP", props);
   return (
     <Fragment>
       <SidebarLeft />

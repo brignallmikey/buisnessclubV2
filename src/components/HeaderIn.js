@@ -4,50 +4,39 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import profilePic from "../assets/images/profile.jpg";
 import { IoMdHappy, IoIosLogOut } from "react-icons/io";
 import { AiTwotoneThunderbolt } from "react-icons/ai";
-import {
-  FaEllipsisH,
-  FaRegCommentDots,
-  FaHeart,
-  FaStar,
-  FaCheck
-} from "react-icons/fa";
+import { FaEllipsisH, FaRegCommentDots, FaHeart, FaStar, FaCheck } from "react-icons/fa";
 import { MdDelete, MdLocalPostOffice, MdArrowDropDown } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 function HeaderIn() {
   return (
-    <div className="author-page author vcard inline-items more">
-      <div className="author-thumb">
-        <img
-          alt="author"
-          src={profilePic}
-          className="avatar"
-          style={{ width: "28px" }}
-        />
-        <span className="icon-status online"></span>
-        <div className="more-dropdown more-with-triangle">
-          <div className="mCustomScrollbar" data-mcs-theme="dark">
-            <div className="ui-block-title ui-block-title-small">
-              <h6 className="title">Your Account</h6>
+    <div className='author-page author vcard inline-items more'>
+      <div className='author-thumb'>
+        <img alt='author' src={profilePic} className='avatar' style={{ width: "28px" }} />
+        <span className='icon-status online'></span>
+        <div className='more-dropdown more-with-triangle'>
+          <div className='mCustomScrollbar' data-mcs-theme='dark'>
+            <div className='ui-block-title ui-block-title-small'>
+              <h6 className='title'>Your Account</h6>
             </div>
 
-            <ul className="account-settings">
+            <ul className='account-settings'>
               <li>
-                <a href="29-YourAccount-AccountSettings.html">
+                <a href='29-YourAccount-AccountSettings.html'>
                   <GiHamburgerMenu />
 
                   <span>Profile Settings</span>
                 </a>
               </li>
               <li>
-                <a href="36-FavPage-SettingsAndCreatePopup.html">
+                <a href='36-FavPage-SettingsAndCreatePopup.html'>
                   <FaStar />
 
                   <span>Create Fav Page</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href='#'>
                   <IoIosLogOut />
 
                   <span>Log Out</span>
@@ -55,28 +44,28 @@ function HeaderIn() {
               </li>
             </ul>
 
-            <div className="ui-block-title ui-block-title-small">
-              <h6 className="title">About Club</h6>
+            <div className='ui-block-title ui-block-title-small'>
+              <h6 className='title'>About Club</h6>
             </div>
 
             <ul>
               <li>
-                <a href="#">
+                <a href='#'>
                   <span>Terms and Conditions</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href='#'>
                   <span>FAQs</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href='#'>
                   <span>Jobs</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href='#'>
                   <span>Contact</span>
                 </a>
               </li>
@@ -84,17 +73,15 @@ function HeaderIn() {
           </div>
         </div>
       </div>
-      <a href="02-ProfilePage.html" className="author-name fn">
-        <div className="author-title">
-          <Router>
-            <Link to="/profile" onClick={() => console.log("Timeline")}>
-              James Speigel
-            </Link>
-          </Router>
-          <MdArrowDropDown />
-        </div>
-        <span className="author-subtitle">SPACE COWBOY</span>
-      </a>
+      <div className='author-title'>
+        <Router>
+          <Link to='/profile' onClick={() => console.log("Timeline")}>
+            James Speigel
+          </Link>
+        </Router>
+        <MdArrowDropDown />
+      </div>
+      <span className='author-subtitle'>SPACE COWBOY</span>
     </div>
   );
 }

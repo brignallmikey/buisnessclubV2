@@ -6,7 +6,8 @@ import { MdSettings } from "react-icons/md";
 import { FaRegCommentDots, FaEllipsisH } from "react-icons/fa";
 import { IoMdHappy } from "react-icons/io";
 
-function ProfileHeader() {
+function ProfileHeader(props) {
+  console.log("props", props);
   return (
     <div className='page-has-left-panels page-has-right-panels'>
       {/*HeaderProfile*/}
@@ -24,28 +25,36 @@ function ProfileHeader() {
                     <div className='col col-lg-5 col-md-5 col-sm-12 col-12'>
                       <ul className='profile-menu'>
                         <li>
-                          <Link to="/profile" className='active' onClick={() => console.log("Timeline")}>
+                          <Link
+                            to='/profile'
+                            className={props.location.pathname === "/profile" ? "active" : ""}
+                            onClick={() => console.log("Timeline")}
+                          >
                             Timeline
-                            </Link>
-                          </li>
-                        <li>
-                        <Link to="/profile/about" onClick={() => console.log("About")}>
-                            About
-                            </Link>
+                          </Link>
                         </li>
                         <li>
-                        <Link to="/profile/friends" onClick={() => console.log("Friends")}>
+                          <Link
+                            to='/profile/about'
+                            className={props.location.pathname === "/profile/about" ? "active" : ""}
+                            onClick={() => console.log("About")}
+                          >
+                            About
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to='/profile/friends' onClick={() => console.log("Friends")}>
                             Friends
-                            </Link>
+                          </Link>
                         </li>
                       </ul>
                     </div>
                     <div className='col col-lg-5 ml-auto col-md-5 col-sm-12 col-12'>
                       <ul className='profile-menu'>
                         <li>
-                        <Link to="/profile/photos" onClick={() => console.log("Photos")}>
+                          <Link to='/profile/photos' onClick={() => console.log("Photos")}>
                             Photos
-                            </Link>
+                          </Link>
                         </li>
                         <li>
                           <div className='more'>
