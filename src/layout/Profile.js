@@ -6,9 +6,9 @@ const Profile = props => {
   return (
     <Layout>
       <Fragment>
-        <ProfileHeader />
-        <div class="container">
-          <div class="row">{props.children}</div>
+        <ProfileHeader location={props.location} />
+        <div class='container'>
+          <div class='row'>{props.children}</div>
         </div>
       </Fragment>
     </Layout>
