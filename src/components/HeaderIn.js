@@ -84,17 +84,16 @@ function HeaderIn() {
           </div>
         </div>
       </div>
-      <a href="02-ProfilePage.html" className="author-name fn">
-        <div className="author-title">
-          <Router>
-            <Link to="/profile" onClick={() => console.log("Timeline")}>
-              James Speigel
-            </Link>
-          </Router>
-          <MdArrowDropDown />
-        </div>
-        <span className="author-subtitle">SPACE COWBOY</span>
-      </a>
+
+      <div className="author-title">
+        <Router>
+          <Link to="/profile" onClick={() => console.log("Timeline")}>
+            James Speigel
+          </Link>
+        </Router>
+        <MdArrowDropDown />
+      </div>
+      <span className="author-subtitle">SPACE COWBOY</span>
     </div>
   );
 }
