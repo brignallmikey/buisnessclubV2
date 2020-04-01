@@ -2,9 +2,9 @@ import React from "react";
 import banner from "../assets/images/pier.jpg";
 import GroupPageLayout from "../layout/GroupPageLayout";
 
-function GroupPhotos() {
+function GroupPhotos(props) {
   return (
-    <GroupPageLayout>
+    <GroupPageLayout location={props.location}>
       <div className="ui-block">
         <div className="ui-block-title">
           <h6 className="title">Last Photos</h6>

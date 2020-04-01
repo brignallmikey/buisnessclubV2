@@ -1,9 +1,9 @@
 import React from "react";
 import GroupPageLayout from "../layout/GroupPageLayout";
 
-function GroupTimeline() {
+function GroupTimeline(props) {
   return (
-    <GroupPageLayout>
+    <GroupPageLayout location={props.location}>
       {/*left*/}
       <div class="col col-xl-3 order-xl-1 col-lg-6 order-lg-2 col-md-6 col-sm-6 col-12">
         L

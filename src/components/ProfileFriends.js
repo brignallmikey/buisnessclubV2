@@ -3,9 +3,9 @@ import React from "react";
 import Profile from "../layout/Profile";
 import FriendCard from "./FriendCard";
 
-function ProfileFriends() {
+function ProfileFriends(props) {
   return (
-    <Profile>
+    <Profile location={props.location}>
       <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         <div class="ui-block responsive-flex">
           <div class="ui-block-title">

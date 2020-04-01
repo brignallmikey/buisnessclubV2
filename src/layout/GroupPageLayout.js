@@ -6,7 +6,7 @@ const GroupPageLayout = props => {
   return (
     <Layout>
       <Fragment>
-        <GroupPageHeader />
+        <GroupPageHeader location={props.location} />
         <div class="container">
           <div class="row">{props.children}</div>
         </div>

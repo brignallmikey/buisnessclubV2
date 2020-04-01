@@ -3,9 +3,9 @@ import GroupPageLayout from "../layout/GroupPageLayout";
 import FriendCard from "../components/FriendCard";
 import Info from "../components/Information";
 
-function GroupAbout() {
+function GroupAbout(props) {
   return (
-    <GroupPageLayout>
+    <GroupPageLayout location={props.location}>
       <div className="container">
         <div className="row">
           <div className="col col-xl-9 order-xl-2 col-lg-12 order-lg-1 col-md-12 col-sm-12 col-12">

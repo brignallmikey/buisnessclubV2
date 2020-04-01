@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Layout from "../layout/Layout";
 import Settings from "../layout/Settings";
 import PersonalInformation from "../components/PersonalInformation";
 import AccountSettings from "../components/AccountSettings";
@@ -15,13 +16,16 @@ import SettingsSidebar from "../components/SettingsSidebar";
 const SettingsPage = () => {
   const [settingsMenu, setSettingsMenu] = useState("personal");
   return (
-    <>
+    <Layout>
       <SettingsHeader />
 
-      <div class='container'>
-        <div class='row'>
-          <SettingsSidebar settingsMenu={settingsMenu} setSettingsMenu={setSettingsMenu} />
-          <div class='col col-xl-9 order-xl-2 col-lg-9 order-lg-2 col-md-12 order-md-1 col-sm-12 col-12'>
+      <div class="container">
+        <div class="row">
+          <SettingsSidebar
+            settingsMenu={settingsMenu}
+            setSettingsMenu={setSettingsMenu}
+          />
+          <div class="col col-xl-9 order-xl-2 col-lg-9 order-lg-2 col-md-12 order-md-1 col-sm-12 col-12">
             {settingsMenu === "personal" && <PersonalInformation />}
             {settingsMenu === "account" && <AccountSettings />}
             {settingsMenu === "password" && <ChangePassword />}
@@ -33,7 +37,7 @@ const SettingsPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 

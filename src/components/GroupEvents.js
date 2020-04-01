@@ -2,9 +2,9 @@ import React from "react";
 import GroupPageLayout from "../layout/GroupPageLayout";
 import Events from "./Events";
 
-function GroupEvents() {
+function GroupEvents(props) {
   return (
-    <GroupPageLayout>
+    <GroupPageLayout location={props.location}>
       <div className="container">
         <div className="row">
           <div className="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">

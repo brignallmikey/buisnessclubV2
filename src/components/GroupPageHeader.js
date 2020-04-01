@@ -6,7 +6,8 @@ import { MdSettings } from "react-icons/md";
 import { FaRegCommentDots, FaEllipsisH } from "react-icons/fa";
 import { IoMdHappy } from "react-icons/io";
 
-function GroupPageHeader() {
+function GroupPageHeader(props) {
+  console.log("props", props);
   return (
     <div className="container">
       <div className="row">
@@ -34,7 +35,11 @@ function GroupPageHeader() {
                       <li>
                         <Link
                           to="/grouppage"
-                          className="active"
+                          className={
+                            props.location.pathname === "/grouppage"
+                              ? "active"
+                              : ""
+                          }
                           onClick={() => console.log("Timeline")}
                         >
                           Timeline
@@ -43,6 +48,11 @@ function GroupPageHeader() {
                       <li>
                         <Link
                           to="/grouppage/about"
+                          className={
+                            props.location.pathname === "/grouppage/about"
+                              ? "active"
+                              : ""
+                          }
                           onClick={() => console.log("About")}
                         >
                           About
@@ -51,6 +61,11 @@ function GroupPageHeader() {
                       <li>
                         <Link
                           to="/grouppage/photos"
+                          className={
+                            props.location.pathname === "/grouppage/photos"
+                              ? "active"
+                              : ""
+                          }
                           onClick={() => console.log("Photos")}
                         >
                           Photos
@@ -60,6 +75,11 @@ function GroupPageHeader() {
                       <li>
                         <Link
                           to="/grouppage/events"
+                          className={
+                            props.location.pathname === "/grouppage/events"
+                              ? "active"
+                              : ""
+                          }
                           onClick={() => console.log("Events")}
                         >
                           Events
