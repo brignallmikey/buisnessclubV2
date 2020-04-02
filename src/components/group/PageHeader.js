@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import banner from "../assets/images/pier.jpg";
-import profilePic from "../assets/images/profile.jpg";
+import banner from "../../assets/images/pier.jpg";
+import profilePic from "../../assets/images/profile.jpg";
 import { MdSettings } from "react-icons/md";
 import { FaRegCommentDots, FaEllipsisH } from "react-icons/fa";
 import { IoMdHappy } from "react-icons/io";
@@ -34,11 +34,9 @@ function GroupPageHeader(props) {
                     <ul className="profile-menu">
                       <li>
                         <Link
-                          to="/grouppage"
+                          to="/"
                           className={
-                            props.location.pathname === "/grouppage"
-                              ? "active"
-                              : ""
+                            props.location.pathname === "/" ? "active" : ""
                           }
                           onClick={() => console.log("Timeline")}
                         >
@@ -47,11 +45,9 @@ function GroupPageHeader(props) {
                       </li>
                       <li>
                         <Link
-                          to="/grouppage/about"
+                          to="/about"
                           className={
-                            props.location.pathname === "/grouppage/about"
-                              ? "active"
-                              : ""
+                            props.location.pathname === "/about" ? "active" : ""
                           }
                           onClick={() => console.log("About")}
                         >
@@ -60,9 +56,9 @@ function GroupPageHeader(props) {
                       </li>
                       <li>
                         <Link
-                          to="/grouppage/photos"
+                          to="/photos"
                           className={
-                            props.location.pathname === "/grouppage/photos"
+                            props.location.pathname === "/photos"
                               ? "active"
                               : ""
                           }
@@ -74,9 +70,9 @@ function GroupPageHeader(props) {
 
                       <li>
                         <Link
-                          to="/grouppage/events"
+                          to="/events"
                           className={
-                            props.location.pathname === "/grouppage/events"
+                            props.location.pathname === "/events"
                               ? "active"
                               : ""
                           }

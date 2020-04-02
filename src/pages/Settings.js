@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import Layout from "../layout/Layout";
 import Settings from "../layout/Settings";
-import PersonalInformation from "../components/PersonalInformation";
-import AccountSettings from "../components/AccountSettings";
-import ChangePassword from "../components/ChangePassword";
-import HobbiesAndInterests from "../components/HobbiesAndInterests";
-import EducationHistory from "../components/EducationHistory";
-import Notifications from "../components/Notifications";
-import FriendRequest from "../components/FriendRequests";
-import FavePage from "../components/FavePage";
-import settingsMenu from "../components/SettingsSidebar";
-import SettingsHeader from "../components/SettingsHeader";
-import SettingsSidebar from "../components/SettingsSidebar";
+import PersonalInformation from "../components/settings/Information";
+import AccountSettings from "../components/settings/AccountSettings";
+import ChangePassword from "../components/settings/ChangePassword";
+import HobbiesAndInterests from "../components/settings/HobbiesAndInterests";
+import EducationHistory from "../components/profile/EducationHistory";
+import Notifications from "../components/settings/Notifications";
+import FriendRequest from "../components/settings/FriendRequests";
+import FavePage from "../components/settings/FavePage";
+import settingsMenu from "../components/settings/Sidebar";
+import SettingsHeader from "../components/settings/Header";
+import SettingsSidebar from "../components/settings/Sidebar";
 
 const SettingsPage = () => {
   const [settingsMenu, setSettingsMenu] = useState("personal");

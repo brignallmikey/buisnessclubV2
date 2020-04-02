@@ -1,7 +1,7 @@
 import React from "react";
 
 import HobbiesInterests from "./HobbiesInterests";
-import Profile from "../layout/Profile";
+import Profile from "../../layout/Profile";
 import Info from "./Information";
 
 function ProfileAbout(props) {

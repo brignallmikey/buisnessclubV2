@@ -1,9 +1,9 @@
 import React from "react";
-import GroupPageLayout from "../layout/GroupPageLayout";
-import FriendCard from "../components/FriendCard";
-import Info from "../components/Information";
+import GroupPageLayout from "../../layout/GroupPageLayout";
+import FriendCard from "../misc/FriendCard";
+import Info from "../profile/Information";
 
-function GroupAbout(props) {
+function About(props) {
   return (
     <GroupPageLayout location={props.location}>
       <div className="container">
@@ -46,4 +46,4 @@ function GroupAbout(props) {
     </GroupPageLayout>
   );
 }
-export default GroupAbout;
+export default About;

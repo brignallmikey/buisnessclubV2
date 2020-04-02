@@ -1,8 +1,8 @@
 import React from "react";
-import GroupPageLayout from "../layout/GroupPageLayout";
-import Events from "./Events";
+import GroupPageLayout from "../../layout/GroupPageLayout";
+import Events from "./Event";
 
-function GroupEvents(props) {
+function EventTab(props) {
   return (
     <GroupPageLayout location={props.location}>
       <div className="container">
@@ -50,4 +50,4 @@ function GroupEvents(props) {
     </GroupPageLayout>
   );
 }
-export default GroupEvents;
+export default EventTab;

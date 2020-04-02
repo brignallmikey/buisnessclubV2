@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
-import profilePic from "../assets/images/profile.jpg";
+import profilePic from "../../assets/images/profile.jpg";
 import { IoMdHappy, IoIosLogOut } from "react-icons/io";
 import { AiTwotoneThunderbolt } from "react-icons/ai";
 import {

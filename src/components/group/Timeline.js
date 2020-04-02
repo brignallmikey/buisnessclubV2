@@ -1,5 +1,5 @@
 import React from "react";
-import GroupPageLayout from "../layout/GroupPageLayout";
+import GroupPageLayout from "../../layout/GroupPageLayout";
 
 function GroupTimeline(props) {
   return (

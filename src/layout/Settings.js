@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import SettingsHeader from "../components/SettingsHeader";
-import SettingsSidebar from "../components/SettingsSidebar";
+import SettingsHeader from "../components/settings/Header";
+import SettingsSidebar from "../components/settings/Sidebar";
 import Layout from "./Layout";
 
 const Settings = props => {

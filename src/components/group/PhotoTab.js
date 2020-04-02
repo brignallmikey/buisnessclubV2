@@ -1,6 +1,6 @@
 import React from "react";
-import banner from "../assets/images/pier.jpg";
-import GroupPageLayout from "../layout/GroupPageLayout";
+import banner from "../../assets/images/pier.jpg";
+import GroupPageLayout from "../../layout/GroupPageLayout";
 
 function GroupPhotos(props) {
   return (

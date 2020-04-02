@@ -1,8 +1,8 @@
 import React from "react";
 
-import Profile from "../layout/Profile";
+import Profile from "../../layout/Profile";
 import CreateAlbum from "./CreateAlbum";
-import PhotoTile from "./PhotoTile";
+import PhotoTile from "../misc/PhotoTile";
 
 function ProfilePictures(props) {
   return (

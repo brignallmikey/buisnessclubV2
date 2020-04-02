@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
-import HeaderIn from "../components/HeaderIn";
-import HeaderOut from "../components/HeaderOut";
+import HeaderIn from "../components/misc/HeaderIn";
+import HeaderOut from "../components/misc/HeaderOut";
 
 import profilePic from "../assets/images/profile.jpg";
 import { IoMdHappy, IoIosLogOut } from "react-icons/io";

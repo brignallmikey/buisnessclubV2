@@ -1,7 +1,7 @@
 import React from "react";
 
-import Profile from "../layout/Profile";
-import FriendCard from "./FriendCard";
+import Profile from "../../layout/Profile";
+import FriendCard from "../misc/FriendCard";
 
 function ProfileFriends(props) {
   return (

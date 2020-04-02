@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import banner from "../assets/images/pier.jpg";
-import profilePic from "../assets/images/profile.jpg";
+import banner from "../../assets/images/pier.jpg";
+import profilePic from "../../assets/images/profile.jpg";
 import { MdSettings } from "react-icons/md";
 import { FaRegCommentDots, FaEllipsisH } from "react-icons/fa";
 import { IoMdHappy } from "react-icons/io";

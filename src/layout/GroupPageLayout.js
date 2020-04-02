@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import GroupPageHeader from "../components/GroupPageHeader";
+import GroupPageHeader from "../components/group/PageHeader";
 import Layout from "./Layout";
 
 const GroupPageLayout = props => {

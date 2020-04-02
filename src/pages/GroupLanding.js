@@ -1,7 +1,7 @@
 import React from "react";
-import GroupHeader from "../components/GroupHeader";
-import CreateGroupCard from "../components/CreateGroupCard";
-import GroupCard from "../components/GroupCard";
+import GroupHeader from "../components/group/Header";
+import CreateGroupCard from "../components/group/CreateGroupCard";
+import GroupCard from "../components/group/GroupCard";
 import Layout from "../layout/Layout";
 
 function GroupLanding() {

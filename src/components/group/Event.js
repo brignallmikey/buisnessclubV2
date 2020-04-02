@@ -1,6 +1,6 @@
 import React from "react";
 
-function Events() {
+function Event() {
   return (
     <tbody>
       <tr className="event-item">
@@ -87,4 +87,4 @@ function Events() {
     </tbody>
   );
 }
-export default Events;
+export default Event;

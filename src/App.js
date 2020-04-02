@@ -5,23 +5,13 @@ import "./assets/sass/main.scss";
 import "./assets/sass/fonts.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Layout from "./layout/Layout";
-
-import Header from "./layout/Header";
-import SidebarLeft from "./layout/SiderbarLeft";
-// import Newsfeed from "./pages/Newsfeed";
-import ProfileHeader from "./components/ProfileHeader";
-import ProfilePost from "./components/ProfilePost";
-import ProfileTimeline from "./components/ProfileTimeline";
-import ProfileAbout from "./components/ProfileAbout";
-import ProfileFriends from "./components/ProfileFriends";
-import ProfilePictures from "./components/ProfilePictures";
+import ProfilePage from "./pages/ProfilePage";
 
 import GroupLanding from "./pages/GroupLanding";
-import GroupTimeline from "./components/GroupTimeline";
-import GroupAbout from "./components/GroupAbout";
-import GroupPhotos from "./components/GroupPhotos";
-import GroupEvents from "./components/GroupEvents";
+import GroupTimeline from "./components/group/Timeline";
+import GroupAbout from "./components/group/About";
+import GroupPhotos from "./components/group/PhotoTab";
+import GroupEvents from "./components/group/EventTab";
 
 import SettingsPage from "./pages/Settings";
 
@@ -64,49 +54,22 @@ function App() {
           path="/newsfeed"
           render={props => <Newsfeed {...props} />}
         />
-
         <Route
           exact
           path="/profile"
-          render={props => <ProfileTimeline {...props} />}
+          render={props => <ProfilePage {...props} />}
         />
-        <Route
-          path="/profile/about"
-          render={props => <ProfileAbout {...props} />}
-        />
-        <Route
-          exact
-          path="/profile/friends"
-          render={props => <ProfileFriends {...props} />}
-        />
-        <Route
-          exact
-          path="/profile/photos"
-          render={props => <ProfilePictures {...props} />}
-        />
-        {/*}
-        <Route exact path='/profile/videos' render={props => <ProfileVideosPage {...props} />} />
-
         */}
         <Route
           exact
           path="/settings"
           render={props => <SettingsPage {...props} />}
         />
-        {/*}
-        <Route exact path='/profile/settings/personal' render={props => <Personal {...props} />} />
-        <Route exact path='/profile/settings/account' render={props => <Account {...props} />} />
-        <Route exact path='/profile/settings/password' render={props => <Password {...props} />} />
-        <Route exact path='/profile/settings/hobbiesinterests' render={props => <HobbiesInterests {...props} />} />
-        <Route exact path='/profile/settings/educationemployment' render={props => <EducationEmployment {...props} />} />
-
-        */}
         <Route
           exact
           path="/groups"
           render={props => <GroupLanding {...props} />}
         />
-
         <Route
           exact
           path="/grouppage"
@@ -117,19 +80,16 @@ function App() {
           path="/grouppage/about"
           render={props => <GroupAbout {...props} />}
         />
-
         <Route
           exact
           path="/grouppage/photos"
           render={props => <GroupPhotos {...props} />}
         />
-
         <Route
           exact
           path="/grouppage/events"
           render={props => <GroupEvents {...props} />}
         />
-
         {/*}
         <Route exact path='/groups/profile' render={props => <GroupTimeline {...props} />} />
         <Route exact path='/groups/profile/about' render={props => <GroupAbout {...props} />} />

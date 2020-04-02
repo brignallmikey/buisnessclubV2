@@ -2,12 +2,12 @@ import React from "react";
 
 import Layout from "../layout/Layout";
 
-import NewsfeedForm from "../components/NewsfeedForm";
-import NewsfeedPost from "../components/NewsfeedPost";
-import NewsfeedComments from "../components/NewsfeedComments";
-import NewsfeedPages from "../components/NewsfeedPages";
-import NewsfeedFriendSuggestions from "../components/NewsfeedFriendSuggestions";
-import NewsfeedFeed from "../components/NewsfeedFeed";
+import NewsfeedForm from "../components/newsfeed/Submission";
+import NewsfeedPost from "../components/newsfeed/Post";
+import NewsfeedComments from "../components/newsfeed/Comments";
+import NewsfeedPages from "../components/newsfeed/Pages";
+import NewsfeedFriendSuggestions from "../components/newsfeed/FriendSuggestions";
+import NewsfeedFeed from "../components/newsfeed/Feed";
 
 function Newsfeed() {
   return (
