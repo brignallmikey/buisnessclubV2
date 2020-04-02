@@ -27,11 +27,13 @@ function ProfileHeader(props) {
                         <li>
                           <Link
                             to="/profile"
-                            className={
+                            /*className={
+                              
                               props.location.pathname === "/profile"
                                 ? "active"
                                 : ""
-                            }
+                            
+                            }*/
                             onClick={() => console.log("Timeline")}
                           >
                             Timeline
@@ -40,11 +42,11 @@ function ProfileHeader(props) {
                         <li>
                           <Link
                             to="/profile/about"
-                            className={
+                            /*className={
                               props.location.pathname === "/profile/about"
                                 ? "active"
                                 : ""
-                            }
+                            }*/
                             onClick={() => console.log("About")}
                           >
                             About
@@ -53,11 +55,11 @@ function ProfileHeader(props) {
                         <li>
                           <Link
                             to="/profile/friends"
-                            className={
+                            /* className={
                               props.location.pathname === "/profile/friends"
                                 ? "active"
                                 : ""
-                            }
+                            }*/
                             onClick={() => console.log("Friends")}
                           >
                             Friends
@@ -70,11 +72,11 @@ function ProfileHeader(props) {
                         <li>
                           <Link
                             to="/profile/photos"
-                            className={
+                            /* className={
                               props.location.pathname === "/profile/photos"
                                 ? "active"
                                 : ""
-                            }
+                            }*/
                             onClick={() => console.log("Photos")}
                           >
                             Photos
